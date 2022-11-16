@@ -36,12 +36,10 @@ Run a MongoDB container for development
           -p 27017:27017 \
           mongo:6.0.2
 
-Update `/etc/hosts` as follows
+Run `minikube addon enable ingress` and update `/etc/hosts` as follows:
 
     <INGRESS LOAD BALANCER IP>     mp3converter.com
     <INGRESS LOAD BALANCER IP>     rabbitmq-manager.com
-
-Also run `minikube addon enable ingress`.
 
 Test with
 
@@ -50,4 +48,4 @@ Test with
     curl -X POST -F 'file=@./video/test3.mp4' -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAZW1haWwuY29tIiwiZXhwIjoxNjY4NzE0MDY2LCJpYXQiOjE2Njg2Mjc2NjYsImFkbWluIjp0cnVlfQ.BzoGzE1He8JT1PVzXcwPJsfWxFOvDtkjEny6rgF7uqU' http://mp3converter.com/upload
 
 
-Continue from 3:57
+Continue from 4:45
